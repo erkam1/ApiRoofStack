@@ -170,6 +170,7 @@ public class roofStackStepDefination {
         testData testData=new testData();
         List<Boolean> actualData=testData.expectedDataWithAllCasesList(true);
         Response response=given().when().contentType(ContentType.JSON).body(actualData).patch(url);
+        assertEquals(actualData.get(0),true);
 
     }
     @Then("updates user activity")
